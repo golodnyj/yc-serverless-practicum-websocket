@@ -1,9 +1,9 @@
 # Настройка окружения для практикума
 
 ## Оглавление
-1. [Предварительная инсталляция](##Предварительная-инсталляция)
-2. [Получение логина и пароля](##Получение-логина-и-пароля)
-3. [Подключение к чату практикума](##Подключение-к-чату-практикума)
+1. [Предварительная инсталляция](#Предварительная-инсталляция)
+2. [Получение логина и пароля](#Получение-логина-и-пароля)
+3. [Подключение к чату практикума](#Подключение-к-чату-практикума)
 
 ## Предварительная инсталляция
 
@@ -68,6 +68,105 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 curl -sSL https://storage.yandexcloud.net/yandexcloud-ydb/install.sh | bash
 exec -l $SHELL 
 ydb version
+```
+
+#### Node.js и Typescript
+
+Установите [Node.js](https://nodejs.org/en/download/current/) версии `16.16.0`:
+
+```bash
+brew install node
+node -v  
+```
+
+```bash
+brew install nvm
+npm -v  
+```
+
+Если вы используете zsh то вам, возможно, потребуется выполнить:
+```bash
+echo 'export NVM_DIR=~/.nvm' >> ~/.zshrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+```bash
+npm install -g typescript
+```
+
+### Windows
+
+- [Установите WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
+- Запустите Ubuntu Linux
+- Настройте согласно инструкции для Ubuntu Linux
+
+### Ubuntu Linux
+
+В случае Linux, отличного от Ubuntu, установите те же пакеты, используя пакетный менеджер вашего дистрибутива.
+
+### Ubuntu Linux
+
+В случае Linux, отличного от Ubuntu, установите те же пакеты, используя пакетный менеджер вашего дистрибутива.
+
+#### IntelliJ IDEA Community Edition
+
+Скачайте и установите дистрибутив IntelliJ IDEA Community Edition, дистрибутив скачать можно [здесь](https://www.jetbrains.com/ru-ru/idea/download/#section=linux).
+Или можно скачать и установить дистрибутив WebStorm, дистрибутив скачать можно [здесь](https://www.jetbrains.com/ru-ru/webstorm/download/#section=linux).
+
+#### Установите утилиты curl и git
+
+```bash
+sudo apt-get install curl git -y
+```
+
+#### Установите утилиту yc CLI
+
+Установите [yc CLI](https://cloud.yandex.ru/docs/cli/operations/install-cli#interactive):
+
+```bash
+curl https://storage.yandexcloud.net/yandexcloud-yc/install.sh | bash
+exec -l $SHELL
+yc version
+```
+
+#### aws CLI
+
+Установите [aws CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html):
+
+```bash
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+Конфигурирование обычно делается по [инструкции](https://cloud.yandex.ru/docs/ydb/quickstart/document-api/aws-setup),
+но в этом практикуме, настройку мы будем делать на одном из следующих шагов.
+
+#### ydb CLI
+
+Установите [ydb CLI](https://ydb.tech/ru/docs/reference/ydb-cli/install):
+
+```bash
+curl -sSL https://storage.yandexcloud.net/yandexcloud-ydb/install.sh | bash
+exec -l $SHELL 
+ydb version
+```
+
+#### Node.js и Typescript
+
+Установите [Node.js](https://nodejs.org/en/download/current/) версии `16.16.0`:
+
+```bash
+sudo apt-get install curl
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash
+sudo apt-get install nodejs
+node -v
+npm -v
+```
+
+```bash
+sudo npm install -g typescript
 ```
 
 ## Получение логина и пароля
