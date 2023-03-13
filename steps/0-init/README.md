@@ -11,6 +11,7 @@
 - IntelliJ IDEA Community Edition (или можно использовать WebStorm, любую другую среду разработки с поддержкой typescript)
 - curl
 - git
+- jq
 - yc (Yandex Cloud CLI)
 - aws (Amazon Web Services CLI)
 - ydb (YDB CLI)
@@ -36,6 +37,12 @@
 
 ```bash
 brew install curl git
+```
+
+#### Установите утилиту jq
+
+```bash
+brew install jq
 ```
 
 #### Установите утилиту yc CLI
@@ -118,6 +125,13 @@ npm install -g typescript
 
 ```bash
 sudo apt-get install curl git -y
+```
+
+#### Установите утилиту jq
+Все варианты дистрибутива jq и инструкции можно [посмотреть тут](https://stedolan.github.io/jq/download/).
+
+```bash
+sudo apt-get install jq
 ```
 
 #### Установите утилиту yc CLI
