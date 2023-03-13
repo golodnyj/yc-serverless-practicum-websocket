@@ -1,3 +1,6 @@
 .DS_Store
 .idea
 /steps/3-create-ydb/sls-deploy.sa
+node_modules/
+dist/
+.serverless/

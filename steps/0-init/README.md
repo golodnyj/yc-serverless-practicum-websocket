@@ -91,7 +91,7 @@ brew install nvm
 npm -v  
 ```
 
-Если вы используете zsh то вам, возможно, потребуется выполнить:
+Если вы используете zsh, то вам, возможно, потребуется выполнить:
 ```bash
 echo 'export NVM_DIR=~/.nvm' >> ~/.zshrc
 echo '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"' >> ~/.zshrc
@@ -203,11 +203,11 @@ sudo npm install -g typescript
 Настройте профиль по [инструкции](https://cloud.yandex.ru/docs/cli/operations/profile/profile-create#interactive-create),
 помните, что вы работаете от имени федеративного пользователя. Идентификатор федерации — `bpfe54qndovthq9a7lp6`
 
-Перейдите в консоль, и используя идентификатор федерации приступите к созданию нового профиля:
+Перейдите в консоль, и, используя идентификатор, федерации приступите к созданию нового профиля:
 
     yc init --federation-id=<ID федерации>
 
 ## Подключение к чату практикума
 
-Вся совместная работа, будет проходить в чате комьюнити [Yandex Serverless Ecosystem](https://t.me/YandexCloudFunctions), 
+Вся совместная работа будет проходить в чате комьюнити [Yandex Serverless Ecosystem](https://t.me/YandexCloudFunctions), 
 для этого практикума в телеграм создан отдельный топик, [подключитесь к нему](https://t.me/YandexCloudFunctions/21064).
