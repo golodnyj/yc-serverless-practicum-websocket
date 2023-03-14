@@ -26,14 +26,15 @@
     yc lockbox secret add-version --id $LOCKBOX_SECRET_ID \
     --payload "[{'key': 'tg_bot_token', 'text_value': '$TG_BOT_TOKEN'}]"
 
-    yc lockbox secret add-version --id $LOCKBOX_SECRET_ID \
-    --payload "[{'key': 'ymq_writer_key_id', 'text_value': '$YMQ_WRITER_KEY_ID'},\
-    {'key': 'ymq_writer_key_secret', 'text_value': '$YMQ_WRITER_KEY_SECRET'},\
-    {'key': 'ymq_capture_queue_url', 'text_value': '$YMQ_CAPTURE_QUEUE_URL'},\
-    {'key': 'ymq_state_change_queue_url', 'text_value': 'YMQ_STATE_CHANGE_QUEUE_URL'},\
-    {'key': 'yds_writer_key_id', 'text_value': '$YDS_WRITER_KEY_ID'},\
-    {'key': 'yds_writer_key_secret', 'text_value': '$YDS_WRITER_KEY_SECRET'},\
-    {'key': 'yds_state_change_stream', 'text_value': 'notify-state-change'},\
-    {'key': 'yds_state_change_database', 'text_value': '$YDB_DATA_STREAMS_DATABASE'}]" 
+Некоторых переменных у нас пока нет, используем в значении таких переменных `null` :
 
-# [cледующий этап >>>](../8-deploy-app/README.md)
+    yc lockbox secret add-version --id $LOCKBOX_SECRET_ID \
+    --payload "[{'key': 'ymq_writer_key_id', 'text_value': 'null'},\
+    {'key': 'ymq_writer_key_secret', 'text_value': 'null'},\
+    {'key': 'ymq_capture_queue_url', 'text_value': 'null'},\ 
+    {'key': 'yds_writer_key_id', 'text_value': 'null'},\
+    {'key': 'yds_writer_key_secret', 'text_value': 'null'},\
+    {'key': 'yds_state_change_stream', 'text_value': 'notify-state-change'},\
+    {'key': 'yds_state_change_database', 'text_value': '$YDB_DATA_STREAMS_DATABASE'}]"
+
+# [cледующий этап >>>](../7-deploy-app/README.md)

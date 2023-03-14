@@ -2,13 +2,25 @@
 ## Настройка yc CLI, создание профайла
 
 Для работы с облаком необходимо настроить утилиту `yc`, 
-рекомендуется создать профиль, в моем случае профиль будет называться `golodnyj`.
-В случае подготовки к практикуму, вы уже выполнили это ранее. Давайте проверим:
+рекомендуется создать профиль, в моем случае профиль называется `golodnyj`.
+В случае подготовки к практикуму, вы уже выполнили это ранее и он называется, допустим `sls350`. Давайте проверим:
 
     yc config profile list
     yc config profile get golodnyj
 
-В выводе последней команды если все хорошо вы увидите значение `cloud-id` и `folder-id` они нам понадобятся далее. 
+В выводе последней команды если все хорошо вы увидите значение `cloud-id` и `folder-id` они нам понадобятся далее.
+
+## Создание токена
+
+У обычного облачного пользователя вы бы использовали `OAUTH_TOKEN`:
+
+    echo "export OAUTH_TOKEN=$(yc config get token)" >> ~/.bashrc && . ~/.bashrc
+    echo $OAUTH_TOKEN
+
+Для федерального пользователя можно получить IAM-токена, укажите свой профиль и выполните:
+
+    echo "export YC_IAM_TOKEN=$(yc iam create-token --profile golodnyj)" >> ~/.bashrc && . ~/.bashrc
+    echo $YC_IAM_TOKEN
 
 ## Создание аккаунта
 
@@ -43,21 +55,9 @@
     --subject serviceAccount:$SERVICE_ACCOUNT_GAME_ID \
     --role editor
 
-## (проверить пункт, пока не делать) Создание токена для сервисного аккаунта
-
-У обычного облачного пользователя вы бы использовали `OAUTH_TOKEN`: 
-
-    echo "export OAUTH_TOKEN=$(yc config get token)" >> ~/.bashrc && . ~/.bashrc
-    echo $OAUTH_TOKEN
-
-Для федерального пользователя можно получить IAM-токена так:
-
-    echo "export YC_IAM_TOKEN=$(yc iam create-token --profile golodnyj)" >> ~/.bashrc && . ~/.bashrc
-    echo $YC_IAM_TOKEN
-
 ## Переменная для выкатки кода
 
     echo "export APP_ENV=production" >> ~/.bashrc && . ~/.bashrc
     echo $APP_ENV
 
-# [cледующий этап >>>](../2-create-service-accounts/README.md)
+# [cледующий этап >>>](../2-create-key/README.md)

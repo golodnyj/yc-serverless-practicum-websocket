@@ -1,5 +1,5 @@
-## Cоздание YDB
-## Создание базы
+# Cоздание YDB
+## Создание экземпляра YDB для хранения данных игры
 
 Создадим базу данных YDB с именем `game-data` и типом serverless используя для этого флаг `--serverless`:
 
@@ -21,6 +21,24 @@
 
     echo "export YDB_DATABASE=<YDB_DATABASE>" >> ~/.bashrc && . ~/.bashrc
     echo $YDB_DATABASE
+
+## Создание экземпляра YDB для Yandex Data Streams
+
+Для создания экземпляра Yandex Data Streams потребуется отдельный экземпляр YDB.
+Создадим базу данных YDB с именем `data-streams` и типом serverless используя для этого флаг `--serverless`:
+
+    yc ydb database create data-streams --serverless --folder-id $YC_FOLDER_ID
+    yc ydb database list
+
+Сразу получим и сохраним значение `endpoint` и `database` в значение переменной `YDB_DATA_STREAMS_ENDPOINT` и `YDB_DATA_STREAMS_DATABASE`.
+
+    yc ydb database get --name data-streams
+
+    echo "export YDB_DATA_STREAMS_ENDPOINT=<YDB_ENDPOINT>" >> ~/.bashrc && . ~/.bashrc
+    echo $YDB_DATA_STREAMS_ENDPOINT
+
+    echo "export YDB_DATA_STREAMS_DATABASE=<YDB_DATABASE>" >> ~/.bashrc && . ~/.bashrc
+    echo $YDB_DATA_STREAMS_DATABASE
 
 ## Генерируем ключ для сервисного аккаунта
 
@@ -80,4 +98,4 @@
     --sa-key-file $SA_KEY_FILE \
     scheme describe Config
 
-# [cледующий этап >>>](../4-create-ymq/README.md)
+# [cледующий этап >>>](../4-create-yds/README.md)

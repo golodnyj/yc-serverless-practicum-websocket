@@ -4,3 +4,5 @@
 node_modules/
 dist/
 .serverless/
+/yc-serverless-serverless-game
+/steps/10-create-api-gw/apigw.yml

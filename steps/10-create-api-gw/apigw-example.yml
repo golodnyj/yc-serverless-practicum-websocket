@@ -1,0 +1,126 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  version: 1.0.0
+paths:
+  /:
+    get:
+      x-yc-apigateway-integration:
+        type: object_storage
+        bucket: serverless-game-files
+        object: index.html
+        service_account_id: <sa-id-for-object-storage>
+      security: []
+  /login.html:
+    get:
+      x-yc-apigateway-integration:
+        type: object_storage
+        bucket: serverless-game-files
+        object: login.html
+        service_account_id: <sa-id-for-object-storage>
+      security: []
+  /stats.html:
+    get:
+      x-yc-apigateway-integration:
+        type: object_storage
+        bucket: serverless-game-files
+        object: stats.html
+        service_account_id: <sa-id-for-object-storage>
+      security: []
+  /limit.html:
+    get:
+      x-yc-apigateway-integration:
+        type: object_storage
+        bucket: serverless-game-files
+        object: limit.html
+        service_account_id: <sa-id-for-object-storage>
+      security: []
+  /static/{file+}:
+    get:
+      x-yc-apigateway-integration:
+        type: object_storage
+        bucket: serverless-game-files
+        object: static/{file}
+        service_account_id: <sa-id-for-object-storage>
+      parameters:
+        - explode: false
+          in: path
+          name: file
+          required: true
+          schema:
+            type: string
+          style: simple
+      security: []
+  /api/get-state:
+    get:
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: <yandex-cloud-nodejs-dev-get-state-function-id>
+        tag: $latest
+        service_account_id: <sa-id-for-functions>
+  /api/get-config:
+    get:
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: <yandex-cloud-nodejs-dev-get-config-function-id>
+        tag: $latest
+        service_account_id: <sa-id-for-functions>
+  /api/move:
+    post:
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: <yandex-cloud-nodejs-dev-move-function-id>
+        tag: $latest
+        service_account_id: <sa-id-for-functions>
+  /api/login:
+    get:
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: <yandex-cloud-nodejs-dev-login-function-id>
+        tag: $latest
+        service_account_id: <sa-id-for-functions>
+      security: []
+  /proxy/tg-avatars/{filePath+}:
+    get:
+      x-yc-apigateway-integration:
+        type: http
+        url: https://t.me/i/userpic/{filePath}
+        method: GET
+      parameters:
+        - explode: false
+          in: path
+          name: filePath
+          required: true
+          schema:
+            type: string
+          style: simple
+  /websocket:
+    x-yc-apigateway-websocket-message:
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: <yandex-cloud-nodejs-dev-ws-message-function-id>
+        service_account_id: <sa-id-for-functions>
+    x-yc-apigateway-websocket-connect:
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: <yandex-cloud-nodejs-dev-ws-connect-function-id>
+        service_account_id: <sa-id-for-functions>
+    x-yc-apigateway-websocket-disconnect:
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: <yandex-cloud-nodejs-dev-ws-disconnect-function-id>
+        service_account_id: <sa-id-for-functions>
+components:
+  securitySchemes:
+    cooikeAuth:
+      x-yc-apigateway-authorizer:
+        type: function
+        function_id: <yandex-cloud-nodejs-dev-auth-function-id>
+        tag: $latest
+        service_account_id: <sa-id-for-functions>
+        authorizer_result_ttl_in_seconds: 180
+      in: cookie
+      name: AUTH
+      type: apiKey
+security:
+  - cooikeAuth: []
