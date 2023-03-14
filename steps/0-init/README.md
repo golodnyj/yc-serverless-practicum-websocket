@@ -112,10 +112,6 @@ npm install -g typescript
 
 В случае Linux, отличного от Ubuntu, установите те же пакеты, используя пакетный менеджер вашего дистрибутива.
 
-### Ubuntu Linux
-
-В случае Linux, отличного от Ubuntu, установите те же пакеты, используя пакетный менеджер вашего дистрибутива.
-
 #### IntelliJ IDEA Community Edition
 
 Скачайте и установите дистрибутив IntelliJ IDEA Community Edition, дистрибутив скачать можно [здесь](https://www.jetbrains.com/ru-ru/idea/download/#section=linux).
@@ -211,3 +207,5 @@ sudo npm install -g typescript
 
 Вся совместная работа будет проходить в чате комьюнити [Yandex Serverless Ecosystem](https://t.me/YandexCloudFunctions), 
 для этого практикума в телеграм создан отдельный топик, [подключитесь к нему](https://t.me/YandexCloudFunctions/21064).
+
+# [cледующий этап >>>](../1-create-service-account/README.md)
