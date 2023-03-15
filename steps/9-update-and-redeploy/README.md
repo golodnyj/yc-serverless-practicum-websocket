@@ -31,4 +31,8 @@
 
     npm run deploy
 
+## Видео
+
+https://youtu.be/R5sPKaFXfyE
+
 # [cледующий этап >>>](../10-create-api-gw/README.md)

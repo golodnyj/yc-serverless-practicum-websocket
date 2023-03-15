@@ -20,4 +20,8 @@
     --stream-name $YDB_DATA_STREAMS_DATABASE/notify-state-change \
     --shard-count 1
 
+## Видео
+
+https://youtu.be/qKdu1hTCq1Q
+
 # [cледующий этап >>>](../5-get-telegram-token/README.md)

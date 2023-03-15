@@ -68,4 +68,8 @@
     npm run build
     npm run deploy
 
+## Видео
+
+https://youtu.be/ZeUtu0nJKls
+
 # [cледующий этап >>>](../8-create-keys/README.md)

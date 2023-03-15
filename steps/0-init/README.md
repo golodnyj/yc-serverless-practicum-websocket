@@ -208,4 +208,7 @@ sudo npm install -g typescript
 Вся совместная работа будет проходить в чате комьюнити [Yandex Serverless Ecosystem](https://t.me/YandexCloudFunctions), 
 для этого практикума в телеграм создан отдельный топик, [подключитесь к нему](https://t.me/YandexCloudFunctions/21064).
 
+По завершению настройки, у вас будет открыто облако, создан профайл, и вам будет доступна инструкция.
+[Видео финала этапа](https://youtu.be/s7-5_3XmI_A).
+
 # [cледующий этап >>>](../1-create-service-account/README.md)

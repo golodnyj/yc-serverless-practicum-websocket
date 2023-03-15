@@ -45,4 +45,8 @@
     echo "export YMQ_WRITER_KEY_SECRET=<secret>" >> ~/.bashrc && . ~/.bashrc
     echo $YMQ_WRITER_KEY_SECRET
 
+## Видео
+
+https://youtu.be/e4cP0n0WFus
+
 # [cледующий этап >>>](../9-update-and-redeploy/README.md)

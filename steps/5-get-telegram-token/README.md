@@ -12,4 +12,8 @@
     echo "export TG_BOT_TOKEN=<token>" >> ~/.bashrc && . ~/.bashrc  
     echo $TG_BOT_TOKEN
 
+## Видео
+
+https://youtu.be/lCHqzwFIlY4
+
 # [cледующий этап >>>](../6-create-lockbox/README.md)

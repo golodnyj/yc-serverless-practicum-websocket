@@ -60,4 +60,8 @@
     echo "export APP_ENV=production" >> ~/.bashrc && . ~/.bashrc
     echo $APP_ENV
 
+## Видео
+
+https://youtu.be/gtRmEaJvHEA
+
 # [cледующий этап >>>](../2-create-key/README.md)

@@ -106,4 +106,8 @@
     --sa-key-file $SA_KEY_FILE \
     scheme describe Config
 
+## Видео
+
+https://youtu.be/ckXXQ0_cSBg
+
 # [cледующий этап >>>](../4-create-yds/README.md)

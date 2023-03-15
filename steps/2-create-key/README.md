@@ -40,5 +40,9 @@
     aws configure
     aws configure list
 
+## Видео
+
+https://youtu.be/3cPXWa9kdhc
+
 # [cледующий этап >>>](../3-create-ydb/README.md)
 

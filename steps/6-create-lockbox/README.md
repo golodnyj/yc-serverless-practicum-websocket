@@ -37,4 +37,8 @@
     {'key': 'yds_state_change_stream', 'text_value': 'notify-state-change'},\
     {'key': 'yds_state_change_database', 'text_value': '$YDB_DATA_STREAMS_DATABASE'}]"
 
+## Видео
+
+https://youtu.be/mniv1E3JB2w
+
 # [cледующий этап >>>](../7-deploy-app/README.md)
