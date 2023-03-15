@@ -31,7 +31,7 @@
     yc lockbox secret add-version --id $LOCKBOX_SECRET_ID \
     --payload "[{'key': 'ymq_writer_key_id', 'text_value': 'null'},\
     {'key': 'ymq_writer_key_secret', 'text_value': 'null'},\
-    {'key': 'ymq_capture_queue_url', 'text_value': 'null'},\ 
+    {'key': 'ymq_capture_queue_url', 'text_value': 'null'},\
     {'key': 'yds_writer_key_id', 'text_value': 'null'},\
     {'key': 'yds_writer_key_secret', 'text_value': 'null'},\
     {'key': 'yds_state_change_stream', 'text_value': 'notify-state-change'},\
