@@ -90,6 +90,14 @@
     --sa-key-file $SA_KEY_FILE \
     scripting yql --file db-example.sql
 
+Если с помощью файл `db-example.sql` была создана структура БД, то далее мы добавим запись — «стартовую конфигурацию»: 
+
+    ydb \
+    --endpoint $YDB_ENDPOINT \
+    --database $YDB_DATABASE \
+    --sa-key-file $SA_KEY_FILE \
+    scripting yql --file db-update.sql
+
 Можем проверить результат выполнения:
 
     ydb \
